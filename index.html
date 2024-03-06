@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/signature_pad@4.0.0/dist/signature_pad.umd.js"></script>
+  <title>PDF Toolbox</title>
+</head>
+<body>
+
+  <div id="container">
+    <h1>PDF Toolbox</h1>
+
+    <!-- Fusionner des PDF -->
+    <form id="mergeForm">
+      <h2>Fusionner des PDF</h2>
+      <!-- (attention: bug dans l'ordre car logique incorrect, a retravailler ultérieurement, les fichiers n'arrivent pas dans l'ordre de selection) -->
+      <input type="file" id="pdfFiles" accept=".pdf" multiple required>
+      <button type="button" onclick="mergePDF()">Fusionner</button>
+    </form>
+
+    <!-- Transformer des JPG en PDF -->
+    <form id="jpgToPdfForm">
+      <h2>Transformer des JPG en PDF</h2>
+      <input type="file" id="jpgFiles" accept=".jpg, .jpeg" multiple required>
+      <button type="button" onclick="jpgToPdf()">Convertir</button>
+    </form>
+
+    <!-- Compresser des PDF -->
+    <form id="compressForm">
+      <h2>Compresser des PDF (beta compression casi nulle)</h2>
+      <input type="file" id="pdfToCompress" accept=".pdf" required>
+      <button type="button" onclick="compressPDF()">Compresser</button>
+    </form>
+
+    <!-- Signer un PDF -->
+    <form id="signForm">
+      <h2>Signer un PDF</h2>
+      <input type="file" id="pdfToSign" accept=".pdf" required>
+      <br>
+      <canvas id="signatureCanvas" width="400" height="200"></canvas>
+      <br>
+      <button type="button" id="signButton">Signer</button>
+      <button type="button" id="resetButton">Réinitialiser</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.16.0/dist/pdf-lib.js"></script>
+    <script src="./scripts/compress.js"></script>
+    <script src="./scripts/fusion.js"></script>
+    <script src="./scripts/jpgToPdf.js"></script>
+    <script src="./scripts/sign.js"></script>
+  </div>
+</body>
+</html>
