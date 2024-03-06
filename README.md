@@ -2,7 +2,8 @@
 
 Un simple index à lancer après avoir git clone le repository
 
-![image](https://github.com/AurelienPREVOST/ToolBox_PDF/assets/102169301/6f617389-1a9e-4115-b76a-fee0014572bb)
+![image](https://github.com/AurelienPREVOST/ToolBox_PDF/assets/102169301/0839c54d-eaa3-49e0-977d-3afbbebc0d2e)
+
 
 
 exploration de pdf-lib rapidement en js vanilla avec code non definitif mais permettant des premiers resultats.  
